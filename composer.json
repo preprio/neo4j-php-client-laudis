@@ -1,5 +1,5 @@
 {
-    "name": "laudis/neo4j-php-client",
+    "name": "preprio/neo4j-php-client-laudis",
     "type": "library",
     "description": "Neo4j-PHP-Client is the most advanced PHP Client for Neo4j",
     "keywords": [

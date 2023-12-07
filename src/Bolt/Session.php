@@ -135,6 +135,9 @@ final class Session implements SessionInterface
     ): TransactionInterface {
         $connection = $this->acquireConnection($tsxConfig, $config);
 
+        // Clear Bookmarks
+        $this->bookmarkHolder = new BookmarkHolder(Bookmark::from([]));
+        
         return new BoltUnmanagedTransaction($this->config->getDatabase(), $this->formatter, $connection, $this->config, $tsxConfig, $this->bookmarkHolder);
     }
 
